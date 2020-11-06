@@ -1,2 +1,2 @@
 # boring-baba
-https://boringbaba.website
+https://boringbaba.github.io
