@@ -315,8 +315,9 @@
             <form class="flex flex-col md:ml-auto w-full gform" action="https://script.google.com/macros/s/AKfycbxgOkyVpLUEgEUSLj8kqoobYacqpxN9CV3aq1_C/exec" name="contact-form-boring-baba" method="POST">
                 <input required name="name" class="bg-white rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2 mb-4" placeholder="Name" type="text">
                 <input required name="email" class="bg-white rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2 mb-4" placeholder="Email" type="email">
-                <input required name="phone-number" class="bg-white rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2 mb-4" placeholder="Phone Number" type="tel">
-                <textarea name="message" class="bg-white rounded border border-gray-400 focus:outline-none h-32 focus:border-indigo-500 text-base px-4 py-2 mb-4 resize-none" placeholder="Message"></textarea>
+                <input required name="phone-number" oninvalid="setCustomValidity('Please Enter Your Mobile Number')" onchange="setCustomValidity('')" 
+                class="bg-white rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2 mb-4" placeholder="Phone Number" pattern="[0-9]{10}" type="tel">
+                <textarea required name="message" class="bg-white rounded border border-gray-400 focus:outline-none h-32 focus:border-indigo-500 text-base px-4 py-2 mb-4 resize-none" placeholder="Message"></textarea>
                 <input id="honeypot" type="text" name="honeypot" value="" style="display: none;"/>
                 <button type="submit" class="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg" id="submit-loading">Submit</button>
             </form>
